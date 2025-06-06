@@ -3,81 +3,50 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>GrowPrime - Expert Gardening & Landscaping Services</title>
+<title>GrowPrime - Expert Gardening &amp; Landscaping Services</title>
 <style>
-  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+  @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@600&display=swap');
 
-  :root {
-    --earth-brown: #8D6E63;
-    --olive: #A1887F;
-    --accent-light: #D7C4B8;
-    --text-dark: #3E2C25;
-    --text-light: #5A473D;
-    --bg-light: #FBF7F4;
-    --shadow: rgba(141, 110, 99, 0.3);
-    --transition-speed: 0.3s;
-  }
-
-  /* Reset and base */
+  /* Base Reset */
   * {
     box-sizing: border-box;
   }
+
   body {
     margin: 0;
     font-family: 'Poppins', sans-serif;
-    background: var(--bg-light);
-    color: var(--text-dark);
+    background: #ffffff;
+    color: #6b7280;
     line-height: 1.6;
     scroll-behavior: smooth;
   }
+
   a {
-    color: var(--earth-brown);
+    color: #6b7280;
     text-decoration: none;
-    transition: color var(--transition-speed);
   }
   a:hover,
   a:focus {
-    color: var(--olive);
+    color: #8D6E63;
     outline: none;
   }
-  h1, h2, h3, h4 {
-    color: var(--earth-brown);
-    font-weight: 600;
-    margin-top: 0;
-  }
-  h1 {
-    font-size: 3rem;
-    line-height: 1.1;
-  }
-  h2 {
-    font-size: 2rem;
-    margin-bottom: 1rem;
-  }
-  h3 {
-    font-size: 1.5rem;
-  }
-  p {
-    color: var(--text-light);
-    font-size: 1rem;
-    max-width: 720px;
-  }
-  section {
-    padding: 4rem 1.5rem 4rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
+
+  /* Container */
   .container {
     max-width: 1200px;
     margin: 0 auto;
-    padding: 0 1.5rem;
+    padding: 4rem 1.5rem 5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4rem;
   }
 
   /* Header */
   header {
     position: sticky;
     top: 0;
-    background: var(--bg-light);
-    box-shadow: 0 2px 8px var(--shadow);
+    background: #ffffff;
+    box-shadow: 0 2px 8px rgba(141, 110, 99, 0.1);
     z-index: 1000;
   }
   nav {
@@ -85,16 +54,16 @@
     margin: 0 auto;
     padding: 1rem 1.5rem;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: space-between;
   }
   .logo {
-    font-size: 1.75rem;
     font-weight: 700;
-    color: var(--earth-brown);
-    letter-spacing: 1px;
-    cursor: default;
+    font-size: 1.75rem;
+    color: #8D6E63;
     user-select: none;
+    cursor: default;
+    letter-spacing: 0.05em;
   }
   .nav-links {
     display: flex;
@@ -103,237 +72,136 @@
   .nav-links a {
     font-weight: 600;
     font-size: 1rem;
-    padding: 0.25rem 0;
     border-bottom: 2px solid transparent;
-    transition: border-color var(--transition-speed);
+    padding-bottom: 0.1rem;
+    transition: border-color 0.3s ease;
   }
   .nav-links a:hover,
   .nav-links a:focus {
-    border-color: var(--earth-brown);
-  }
-  .btn-primary {
-    background: var(--earth-brown);
-    color: white;
-    border: none;
-    padding: 0.6rem 1.6rem;
-    font-weight: 700;
-    font-size: 1.1rem;
-    border-radius: 30px;
-    cursor: pointer;
-    transition: background-color var(--transition-speed), transform 0.2s;
-    box-shadow: 0 6px 12px rgba(141,110,99,0.3);
-  }
-  .btn-primary:hover,
-  .btn-primary:focus {
-    background: var(--olive);
-    transform: scale(1.05);
-    outline: none;
+    border-color: #8D6E63;
   }
 
-  /* Hero */
+  /* Hero Section */
   #hero {
     text-align: center;
-    padding: 6rem 1.5rem 8rem;
-    background: linear-gradient(135deg, var(--earth-brown) 0%, var(--olive) 100%);
+    padding: 7rem 1.5rem 9rem;
+    background: linear-gradient(135deg, #8D6E63 0%, #A1887F 100%);
     color: white;
     border-radius: 0 0 60px 60px;
     box-shadow: inset 0 0 80px rgba(0,0,0,0.25);
     position: relative;
-    overflow: hidden;
   }
   #hero h1 {
-    font-size: 3.5rem;
+    font-size: 56px;
+    font-weight: 700;
     margin-bottom: 1rem;
     text-shadow: 1px 1px 8px rgba(0,0,0,0.3);
   }
   #hero p {
-    font-size: 1.25rem;
+    font-size: 22px;
     max-width: 600px;
-    margin: 0 auto 2rem;
+    margin: 0 auto 3rem;
     text-shadow: 1px 1px 6px rgba(0,0,0,0.25);
+  }
+  .btn-primary {
+    background-color: #fbf7f4;
+    color: #8D6E63;
+    font-weight: 700;
+    font-size: 1.3rem;
+    padding: 1rem 3rem;
+    border-radius: 12px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(141, 110, 99, 0.3);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.2s ease;
+  }
+  .btn-primary:hover,
+  .btn-primary:focus {
+    background-color: #A1887F;
+    color: white;
+    transform: scale(1.05);
+    outline: none;
   }
 
   /* Services Section */
   #services {
     display: grid;
     grid-template-columns: repeat(auto-fit,minmax(320px,1fr));
-    gap: 2rem;
+    gap: 3rem;
+    padding-top: 2rem;
   }
   .service-card {
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 8px 20px var(--shadow);
-    padding: 2rem;
+    border-radius: 12px;
+    background: #fff;
+    padding: 2rem 2rem 3rem;
+    box-shadow: 0 4px 20px rgba(141, 110, 99, 0.12);
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    transition: box-shadow 0.3s ease, transform 0.3s ease;
     cursor: pointer;
-    position: relative;
   }
   .service-card:hover,
   .service-card:focus-within {
+    box-shadow: 0 12px 40px rgba(141, 110, 99, 0.25);
     transform: translateY(-8px);
-    box-shadow: 0 14px 40px rgba(141, 110, 99, 0.45);
+    outline: none;
   }
   .service-card img {
     width: 100%;
+    border-radius: 10px;
+    margin-bottom: 1.5rem;
     object-fit: cover;
-    border-radius: 0.75rem;
-    margin-bottom: 1rem;
     aspect-ratio: 16 / 9;
   }
   .service-card h3 {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #8D6E63;
     margin-bottom: 0.5rem;
-    color: var(--earth-brown);
+  }
+  .service-card p {
+    flex-grow: 1;
+    color: #6b7280;
+    font-size: 1rem;
+    margin-bottom: 1rem;
   }
   .service-price {
     font-weight: 700;
-    font-size: 1.2rem;
-    color: var(--olive);
-    margin-top: 1rem;
+    font-size: 1.15rem;
+    color: #A1887F;
   }
   .read-more {
-    margin-top: auto;
-    text-align: right;
+    margin-top: 1rem;
     font-weight: 600;
-    color: var(--earth-brown);
-    user-select: none;
+    color: #8D6E63;
+    align-self: flex-end;
     cursor: pointer;
-    transition: color var(--transition-speed);
+    user-select: none;
+    transition: color 0.3s ease;
   }
   .read-more:hover,
   .read-more:focus {
-    color: var(--olive);
+    color: #A1887F;
     outline: none;
-  }
-
-  /* Popup Modal */
-  .popup-overlay {
-    position: fixed;
-    inset: 0;
-    background: rgba(141,110,99,0.85);
-    display: none;
-    justify-content: center;
-    align-items: center;
-    z-index: 1100;
-  }
-  .popup-overlay.active {
-    display: flex;
-    animation: fadeInBackground 0.4s ease forwards;
-  }
-  @keyframes fadeInBackground {
-    from {background: rgba(141,110,99,0);}
-    to {background: rgba(141,110,99,0.85);}
-  }
-  .popup-content {
-    background: #fbf7f4;
-    border-radius: 1.2rem;
-    box-shadow: 0 10px 30px var(--shadow);
-    max-width: 600px;
-    max-height: 80vh;
-    overflow-y: auto;
-    padding: 2.5rem;
-    position: relative;
-    animation: popupSlideIn 0.4s cubic-bezier(0.25,0.8,0.25,1);
-  }
-  @keyframes popupSlideIn {
-    from {
-      opacity: 0; 
-      transform: translateY(60px);
-    } 
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
-  .popup-close {
-    position: absolute;
-    top: 1rem;
-    right: 1rem;
-    background: var(--earth-brown);
-    color: white;
-    border: none;
-    font-size: 1.5rem;
-    width: 2.8rem;
-    height: 2.8rem;
-    border-radius: 50%;
-    cursor: pointer;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.3);
-    transition: background-color 0.3s ease;
-  }
-  .popup-close:hover,
-  .popup-close:focus {
-    background: var(--olive);
-    outline: none;
-  }
-  .popup-content h3 {
-    margin-top: 0;
-    color: var(--earth-brown);
-  }
-  .popup-content p {
-    color: var(--text-light);
-  }
-
-  /* Pricing Section */
-  #pricing {
-    background: var(--accent-light);
-    border-radius: 1rem;
-    padding: 3rem 1.5rem;
-    text-align: center;
-  }
-  #pricing h2 {
-    margin-bottom: 2rem;
-  }
-  .pricing-table {
-    display: grid;
-    grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-    gap: 2rem;
-    max-width: 800px;
-    margin: 0 auto;
-  }
-  .pricing-card {
-    background: white;
-    border-radius: 1rem;
-    box-shadow: 0 8px 20px var(--shadow);
-    padding: 2rem;
-    border: 2px solid transparent;
-    transition: border-color 0.3s ease;
-  }
-  .pricing-card:hover,
-  .pricing-card:focus-within {
-    border-color: var(--earth-brown);
-  }
-  .pricing-card h3 {
-    color: var(--earth-brown);
-    margin-bottom: 0.5rem;
-  }
-  .price {
-    font-size: 2rem;
-    font-weight: 700;
-    color: var(--olive);
-    margin-bottom: 1rem;
-  }
-  .price-details {
-    font-weight: 400;
-    color: var(--text-light);
   }
 
   /* About Section */
   #about {
-    padding-top: 5rem;
-    padding-bottom: 6rem;
     max-width: 900px;
-    margin-left: auto;
-    margin-right: auto;
+    margin: 4rem auto 0;
     text-align: center;
+    color: #6b7280;
   }
   #about h2 {
+    color: #8D6E63;
+    font-size: 2.5rem;
     margin-bottom: 1rem;
+    font-weight: 700;
   }
   #about p {
-    font-size: 1.15rem;
-    line-height: 1.8;
+    font-size: 1.125rem;
+    margin-bottom: 1.5rem;
   }
 
   /* Testimonials Section */
@@ -341,14 +209,16 @@
     background: #fff8f4;
     padding: 5rem 1.5rem;
     max-width: 1000px;
-    margin: 0 auto;
+    margin: 4rem auto 0;
     border-radius: 1rem;
     box-shadow: 0 4px 20px rgba(141, 110, 99, 0.2);
     text-align: center;
   }
   #testimonials h2 {
     margin-bottom: 2rem;
-    color: var(--earth-brown);
+    color: #8D6E63;
+    font-weight: 700;
+    font-size: 2rem;
   }
   .testimonial-cards {
     display: grid;
@@ -366,394 +236,144 @@
   .testimonial-card::before {
     content: "“";
     font-size: 3rem;
-    color: var(--earth-brown);
+    color: #8D6E63;
     position: absolute;
     top: 0.2rem;
     left: 1rem;
   }
   .testimonial-card p {
     margin: 0 0 1rem 0;
+    color: #6b7280;
   }
   .testimonial-author {
     font-weight: 600;
-    color: var(--olive);
-  }
-
-  /* Disclaimer & Customer satisfaction */
-  #disclaimer-custsat {
-    max-width: 900px;
-    background: var(--accent-light);
-    color: var(--text-dark);
-    margin: 3rem auto 5rem;
-    border-radius: 1rem;
-    padding: 2.5rem 3rem;
-    box-shadow: 0 6px 18px rgba(141,110,99,0.2);
-    font-size: 0.9rem;
-  }
-  #disclaimer-custsat strong {
-    color: var(--earth-brown);
-  }
-  #disclaimer-custsat p + p {
-    margin-top: 1rem;
+    color: #A1887F;
   }
 
   /* Footer */
   footer {
-    background: var(--earth-brown);
-    color: #fbf7f4;
+    background: #8D6E63;
+    color: white;
     text-align: center;
     padding: 1.5rem 1rem;
     font-size: 0.9rem;
     user-select: none;
   }
   footer a {
-    color: #fbf7f4;
+    color: white;
     font-weight: 600;
   }
 
-  /* Responsive typography */
+  /* Responsive */
   @media (max-width: 768px) {
-    h1 {
-      font-size: 2.5rem;
+    #hero h1 {
+      font-size: 36px;
     }
     #hero p {
-      font-size: 1rem;
+      font-size: 18px;
+    }
+    .service-card h3 {
+      font-size: 1.25rem;
+    }
+    #about h2 {
+      font-size: 2rem;
+    }
+    #testimonials h2 {
+      font-size: 1.75rem;
     }
   }
 </style>
 </head>
 <body>
-
 <header role="banner">
   <nav role="navigation" aria-label="Primary Navigation">
-    <div class="logo" aria-label="GrowPrime Gardening Logo">GrowPrime</div>
+    <div class="logo">GrowPrime</div>
     <div class="nav-links">
-    <a href="index.html"  tabindex="0" aria-current="page">Home</a>
-        <a href="privacy.html" tabindex="0">privacy</a>
-        <a href="terms.html" tabindex="0">terms & conditions</a>
-        <a href="cookies.html" tabindex="0">Cookies</a>
-        <a href="contact.html" tabindex="0">Contact us</a>
+      <a href="index.html" tabindex="0" aria-current="page">Home</a>
+      <a href="services.html" tabindex="0">Services</a>
+      <a href="contact.html" tabindex="0">Contact</a>
+      <a href="privacy.html" tabindex="0">Privacy</a>
     </div>
   </nav>
 </header>
 
-<main>
+<main class="container">
   <section id="hero" aria-label="Hero Section">
-    <h1>GrowPrime: Cultivating Your Dream Garden</h1>
-    <p>Your trusted partner for expert gardening and landscaping services in Brooklyn, NY.</p>
-    <button class="btn-primary" id="btn-contact" aria-haspopup="dialog" aria-controls="popup-contact">Get Started Today</button>
+    <h1>Cultivating Your Dream Garden</h1>
+    <p>Professional gardening and landscaping services tailored to bring your outdoor spaces to life. Experience sustainable beauty and expert care with GrowPrime.</p>
+    <button class="btn-primary" aria-label="Contact GrowPrime">Get Started Today</button>
   </section>
 
-  <section id="services" aria-label="Our Gardening Services">
-    <h2>Our Expert Gardening & Landscaping Services</h2>
-    <p>Growing your green space into a thriving oasis is our specialty. Explore services designed to beautify, maintain, and transform your outdoor environment with personalized care.</p>
-
+  <section id="services" aria-label="Our Services">
     <article class="service-card" tabindex="0" role="button" aria-describedby="desc-flowerbeds" data-service="flowerbeds">
-      <img src="s1.jpg" alt="Beautiful flower beds with colorful flowers"/>
+      <img src="https://images.unsplash.com/photo-1501004318641-b39e6451bec6?auto=format&fit=crop&w=800&q=80" alt="Beautiful flower beds with colorful flowers" />
       <h3>Custom Flower Bed Design</h3>
-      <p id="desc-flowerbeds">Create vibrant flower beds tailored to your style and space, featuring seasonal blooms and drought-resistant plants.</p>
+      <p id="desc-flowerbeds">Create vibrant flower beds tailored to your style featuring seasonal blooms and drought-resistant plants to enrich your garden's beauty.</p>
       <div class="service-price">$350 - Starting Price</div>
-      <div class="read-more" tabindex="0" aria-label="Read more about Custom Flower Bed Design service">Read More &raquo;</div>
+      <div class="read-more" tabindex="0">Read More &raquo;</div>
     </article>
 
     <article class="service-card" tabindex="0" role="button" aria-describedby="desc-lawncare" data-service="lawncare">
-      <img src="s2.jpg" alt="Lush green freshly mowed lawn"/>
+      <img src="https://images.unsplash.com/photo-1469474968028-56623f02e42e?auto=format&fit=crop&w=800&q=80" alt="Lush green freshly mowed lawn" />
       <h3>Year-Round Lawn Care</h3>
-      <p id="desc-lawncare">Keep your lawn healthy and green all year with mowing, aerating, fertilization and pest control services.</p>
+      <p id="desc-lawncare">Professional upkeep including mowing, fertilizing, aeration, and pest control to keep your lawn green and healthy throughout every season.</p>
       <div class="service-price">$120 / month</div>
-      <div class="read-more" tabindex="0" aria-label="Read more about Year-Round Lawn Care service">Read More &raquo;</div>
+      <div class="read-more" tabindex="0">Read More &raquo;</div>
     </article>
 
     <article class="service-card" tabindex="0" role="button" aria-describedby="desc-hardscaping" data-service="hardscaping">
-      <img src="s3.jpg" alt="Modern stone hardscaping pathway"/>
+      <img src="https://images.unsplash.com/photo-1494526585095-c41746248156?auto=format&fit=crop&w=800&q=80" alt="Modern stone pathway hardscaping" />
       <h3>Hardscaping & Patios</h3>
-      <p id="desc-hardscaping">Design and installation of patios, walkways, and retaining walls to enhance your outdoor living space.</p>
+      <p id="desc-hardscaping">Design and installation of patios, walkways, and stone features to enhance your outdoor living space with style and functionality.</p>
       <div class="service-price">$2,000 - Starting Price</div>
-      <div class="read-more" tabindex="0" aria-label="Read more about Hardscaping & Patios service">Read More &raquo;</div>
+      <div class="read-more" tabindex="0">Read More &raquo;</div>
     </article>
 
     <article class="service-card" tabindex="0" role="button" aria-describedby="desc-treeshrubs" data-service="treeshrubs">
-      <img src="s4.jpg" alt="Tree pruning and shrub trimming"/>
+      <img src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?auto=format&fit=crop&w=800&q=80" alt="Tree pruning and shrub trimming" />
       <h3>Tree & Shrub Care</h3>
-      <p id="desc-treeshrubs">Professional pruning, trimming, and health assessment to keep your trees and shrubs flourishing.</p>
+      <p id="desc-treeshrubs">Expert pruning and health care to ensure your trees and shrubs grow strong and beautiful year after year.</p>
       <div class="service-price">$150 - Starting Price</div>
-      <div class="read-more" tabindex="0" aria-label="Read more about Tree & Shrub Care service">Read More &raquo;</div>
+      <div class="read-more" tabindex="0">Read More &raquo;</div>
     </article>
 
-    <article class="service-card" tabindex="0" role="button" aria-describedby="desc-irrigationsystems" data-service="irrigation">
-      <img src="s5.jpg" alt="Installation of irrigation system in garden"/>
+    <article class="service-card" tabindex="0" role="button" aria-describedby="desc-irrigation" data-service="irrigation">
+      <img src="https://images.unsplash.com/photo-1534157269403-38a7b5344de3?auto=format&fit=crop&w=800&q=80" alt="Irrigation system installation" />
       <h3>Irrigation System Installation</h3>
-      <p id="desc-irrigationsystems">Automated and custom irrigation setups to conserve water and ensure optimal watering schedules.</p>
+      <p id="desc-irrigation">Custom irrigation installation for efficient water use and automated plant watering, conserving resources while keeping your garden lush.</p>
       <div class="service-price">$1,200 - Starting Price</div>
-      <div class="read-more" tabindex="0" aria-label="Read more about Irrigation System Installation service">Read More &raquo;</div>
+      <div class="read-more" tabindex="0">Read More &raquo;</div>
     </article>
   </section>
 
-  <section id="pricing" aria-label="Service Pricing">
-    <h2>Simple & Transparent Pricing</h2>
-    <p>We believe in clear prices with no surprises. Choose the package that fits your needs, or contact us for a custom quote.</p>
-    <div class="pricing-table">
-      <div class="pricing-card" tabindex="0">
-        <h3>Basic Care</h3>
-        <div class="price">$120 / month</div>
-        <div class="price-details">
-          Lawn mowing, fertilization, and pest control.<br />
-          Great for small lawns and seasonal upkeep.
-        </div>
-      </div>
-      <div class="pricing-card" tabindex="0">
-        <h3>Standard Package</h3>
-        <div class="price">$350 / month</div>
-        <div class="price-details">
-          Everything in Basic Care plus pruning and flower bed maintenance.<br />
-          Ideal for medium-sized yards.
-        </div>
-      </div>
-      <div class="pricing-card" tabindex="0">
-        <h3>Premium Landscaping</h3>
-        <div class="price">$900 / month</div>
-        <div class="price-details">
-          Comprehensive landscaping including hardscaping, irrigation, and seasonal design.<br />
-          Perfect for larger properties and custom projects.
-        </div>
-      </div>
-    </div>
-  </section>
-
-  <section id="about" aria-label="About GrowPrime Gardening">
+  <section id="about" aria-label="About GrowPrime">
     <h2>About GrowPrime</h2>
-    <p>At GrowPrime, we believe a beautiful garden enriches the soul and uplifts the environment around you. With over a decade of experience serving Brooklyn and New York City residents, our team combines horticultural expertise, artistic design, and sustainable practices to deliver gardens that thrive throughout the seasons.</p>
-    <p>Our dedicated specialists work closely with each client, tailoring every garden to reflect their unique tastes, lifestyle, and local ecosystem. From planting native wildflowers to installing custom patios, we provide a holistic approach to outdoor living that enhances comfort, biodiversity, and curb appeal.</p>
-    <p>Committed to environmental stewardship, we utilize organic fertilizers, water-saving irrigation, and select plant species that complement the natural soil and climate conditions. Whether you need regular garden care or a complete outdoor transformation, GrowPrime stands ready to cultivate your dream green space with care, creativity, and professionalism.</p>
+    <p>GrowPrime has been dedicated to creating beautiful, sustainable gardens in Brooklyn and the greater New York City area for over a decade. Our expert team combines horticultural knowledge with artistic design to bring your outdoor space to life.</p>
+    <p>Our approach blends classic gardening principles with eco-friendly practices that prioritize native plantings, water conservation, and soil health. With GrowPrime, your garden becomes a thriving sanctuary tailored to your lifestyle and local environment.</p>
   </section>
 
   <section id="testimonials" aria-label="Customer Testimonials">
     <h2>Customer Satisfaction</h2>
     <div class="testimonial-cards">
-      <div class="testimonial-card" tabindex="0">
+      <article class="testimonial-card" tabindex="0">
         <p>GrowPrime transformed my backyard into a stunning retreat. Their team was professional and always went the extra mile. Highly recommended!</p>
         <div class="testimonial-author">— Sarah L., Brooklyn</div>
-      </div>
-      <div class="testimonial-card" tabindex="0">
+      </article>
+      <article class="testimonial-card" tabindex="0">
         <p>The flower bed design brought so much life and color to my home. The consult and execution were seamless. Fantastic service!</p>
         <div class="testimonial-author">— Mark T., Queens</div>
-      </div>
-      <div class="testimonial-card" tabindex="0">
+      </article>
+      <article class="testimonial-card" tabindex="0">
         <p>Consistent, reliable lawn maintenance with noticeable improvements each month. Great communication and expertise from GrowPrime's crew.</p>
         <div class="testimonial-author">— Priya S., Manhattan</div>
-      </div>
+      </article>
     </div>
-  </section>
-
-  <section id="disclaimer-custsat" aria-label="Disclaimer and Customer Satisfaction">
-    <p><strong>Disclaimer:</strong> While GrowPrime makes every effort to provide expert and quality gardening services, results may vary based on weather, soil conditions, and plant care. All services are subject to change based on seasonal availability and unforeseen circumstances. Please consult with our team for personalized recommendations.</p>
-    <p><strong>Customer Satisfaction:</strong> Your satisfaction is our priority. If you have any questions or concerns about our services, please contact us immediately. We are committed to resolving any issues promptly and ensuring your outdoor space exceeds your expectations.</p>
-  </section>
-
-  <section id="contact" aria-label="Contact GrowPrime Gardening">
-    <h2>Get In Touch</h2>
-    <p>Ready to start your gardening project or need a consultation? Reach out to GrowPrime today. Our team is happy to answer your questions and create a tailored plan for your outdoor needs.</p>
-    <address>
-      <strong>Address:</strong> Metrotech Center, Brooklyn, NY 11201, USA<br />
-      <strong>Phone:</strong> <a href="tel:+17187234567" aria-label="Call GrowPrime Gardening">(718) 723-4567</a><br />
-      <strong>Email:</strong> <a href="mailto:info@growprime.com" aria-label="Send email to GrowPrime Gardening">info@growprime.com</a>
-    </address>
   </section>
 </main>
 
 <footer role="contentinfo">
   &copy; 2024 GrowPrime Gardening | Metrotech Center, Brooklyn, NY 11201, USA | Phone: (718) 723-4567
 </footer>
-
-<!-- Popups for services detail -->
-<div class="popup-overlay" role="dialog" aria-modal="true" aria-hidden="true" id="popup-flowerbeds" aria-labelledby="title-flowerbeds" tabindex="-1">
-  <div class="popup-content">
-    <button class="popup-close" aria-label="Close flower bed design details">&times;</button>
-    <h3 id="title-flowerbeds">Custom Flower Bed Design</h3>
-    <p>Our flower bed design service combines artistry and horticulture to craft beautiful garden beds with seasonal and perennial plants, tailored for your land's sunlight, soil, and climate. We incorporate native species for sustainability, selecting flowers by bloom time to ensure continuous color throughout spring to fall. We collaborate with you on design style, ranging from modern minimalist beds to lush cottage garden aesthetics.</p>
-    <p>Services include soil preparation, installation of edging, planting, mulching, and ongoing care instructions. Whether you want a peaceful zen-inspired corner or vibrant mixed flower beds near your patio, GrowPrime ensures your garden blooms with joyful vibrancy.</p>
-    <p><strong>Starting Price:</strong> $350 (depending on size and plant selection)</p>
-  </div>
-</div>
-
-<div class="popup-overlay" role="dialog" aria-modal="true" aria-hidden="true" id="popup-lawncare" aria-labelledby="title-lawncare" tabindex="-1">
-  <div class="popup-content">
-    <button class="popup-close" aria-label="Close lawn care details">&times;</button>
-    <h3 id="title-lawncare">Year-Round Lawn Care</h3>
-    <p>Keep your lawn lush, healthy, and pest-free all year long with our comprehensive lawn care packages. Regular mowing, aerating, fertilizing, and insect control are tailored to your grass type and soil conditions. Seasonal services include leaf removal, overseeding, and weed treatment.</p>
-    <p>We use eco-friendly products whenever possible and provide custom schedules that work with your property's needs and climate challenges. Our commitment ensures maximum curb appeal and a refreshing green lawn throughout the year.</p>
-    <p><strong>Monthly Subscription:</strong> $120 / month</p>
-  </div>
-</div>
-
-<div class="popup-overlay" role="dialog" aria-modal="true" aria-hidden="true" id="popup-hardscaping" aria-labelledby="title-hardscaping" tabindex="-1">
-  <div class="popup-content">
-    <button class="popup-close" aria-label="Close hardscaping details">&times;</button>
-    <h3 id="title-hardscaping">Hardscaping & Patios</h3>
-    <p>We design and install high-quality patios, walkways, retaining walls, and other stone or concrete features that integrate seamlessly with your garden environment. Using premium materials and expert craftsmanship, your backyard will gain durable, practical, and beautiful hardscapes enhancing outdoor living and entertaining.</p>
-    <p>Our designers collaborate with you on layout, style, and textures—matching modern, rustic, or natural themes. We also provide maintenance tips to prolong the beauty and integrity of your hardscape.</p>
-    <p><strong>Starting Price:</strong> $2,000 (custom quotes available)</p>
-  </div>
-</div>
-
-<div class="popup-overlay" role="dialog" aria-modal="true" aria-hidden="true" id="popup-treeshrubs" aria-labelledby="title-treeshrubs" tabindex="-1">
-  <div class="popup-content">
-    <button class="popup-close" aria-label="Close tree and shrub care details">&times;</button>
-    <h3 id="title-treeshrubs">Tree & Shrub Care</h3>
-    <p>Proper maintenance keeps your trees and shrubs vibrant, healthy, and safely shaped. Our certified arborists provide pruning, trimming, disease evaluation, and emergency storm damage services. We develop customized care plans based on species, soil quality, and seasonal growth patterns.</p>
-    <p>Our work increases overall plant longevity and minimizes safety hazards from overgrowth or unhealthy limbs. We educate clients on proper watering, feeding, and pest prevention practices for sustained outdoor beauty.</p>
-    <p><strong>Starting Price:</strong> $150</p>
-  </div>
-</div>
-
-<div class="popup-overlay" role="dialog" aria-modal="true" aria-hidden="true" id="popup-irrigation" aria-labelledby="title-irrigation" tabindex="-1">
-  <div class="popup-content">
-    <button class="popup-close" aria-label="Close irrigation system details">&times;</button>
-    <h3 id="title-irrigation">Irrigation System Installation</h3>
-    <p>Efficient water management is key to garden vitality and sustainability. GrowPrime offers custom design and installation of irrigation systems that save water and automate watering schedules for optimal plant health.</p>
-    <p>Systems include drip irrigation for flower beds to reduce evaporation, smart timers, rain sensors, and irrigation zoning to deliver the right amount of water where it's needed most. We ensure proper installation and provide training for operation and seasonal adjustments.</p>
-    <p><strong>Starting Price:</strong> $1,200</p>
-  </div>
-</div>
-
-<div class="popup-overlay" role="dialog" aria-modal="true" aria-hidden="true" id="popup-contact" aria-labelledby="title-contact" tabindex="-1">
-  <div class="popup-content">
-    <button class="popup-close" aria-label="Close contact form">&times;</button>
-    <h3 id="title-contact">Contact GrowPrime</h3>
-    <form id="contact-form" autocomplete="off" aria-describedby="contact-desc">
-      <p id="contact-desc">Please fill in your details and message, and we'll get back to you promptly.</p>
-      <label for="name">Name:</label><br />
-      <input type="text" id="name" name="name" required aria-required="true" /><br /><br />
-      <label for="email">Email:</label><br />
-      <input type="email" id="email" name="email" required aria-required="true" /><br /><br />
-      <label for="message">Message:</label><br />
-      <textarea id="message" name="message" rows="4" required aria-required="true"></textarea><br /><br />
-      <button type="submit" class="btn-primary">Send Message</button>
-    </form>
-    <p id="form-message" style="margin-top:1rem;color:var(--earth-brown);font-weight:600;display:none;"></p>
-  </div>
-</div>
-
-<script>
-  // Popup open/close logic
-  const serviceCards = document.querySelectorAll('.service-card');
-  const popups = document.querySelectorAll('.popup-overlay');
-  const readMoreElements = document.querySelectorAll('.read-more');
-  const contactBtn = document.getElementById('btn-contact');
-  const popupContact = document.getElementById('popup-contact');
-  const formMessage = document.getElementById('form-message');
-  const contactForm = document.getElementById('contact-form');
-
-  function openPopup(popupId) {
-    const popup = document.getElementById(popupId);
-    if (popup) {
-      popup.classList.add('active');
-      popup.setAttribute('aria-hidden', 'false');
-      popup.focus();
-      document.body.style.overflow = 'hidden';
-    }
-  }
-
-  function closePopup(popup) {
-    popup.classList.remove('active');
-    popup.setAttribute('aria-hidden', 'true');
-    document.body.style.overflow = '';
-  }
-
-  // Assign event listeners on service cards and read more
-  serviceCards.forEach(card => {
-    card.addEventListener('click', () => {
-      openPopup('popup-' + card.dataset.service);
-    });
-    card.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        openPopup('popup-' + card.dataset.service);
-      }
-    });
-  });
-  readMoreElements.forEach(element => {
-    element.addEventListener('click', e => {
-      e.stopPropagation();
-      const serviceCard = e.target.closest('.service-card');
-      if (serviceCard) openPopup('popup-' + serviceCard.dataset.service);
-    });
-    element.addEventListener('keydown', e => {
-      if (e.key === 'Enter' || e.key === ' ') {
-        e.preventDefault();
-        const serviceCard = e.target.closest('.service-card');
-        if (serviceCard) openPopup('popup-' + serviceCard.dataset.service);
-      }
-    });
-  });
-
-  // Close popups on close button or overlay click
-  popups.forEach(popup => {
-    const closeBtn = popup.querySelector('.popup-close');
-    closeBtn.addEventListener('click', () => closePopup(popup));
-    popup.addEventListener('click', (e) => {
-      if (e.target === popup) {
-        closePopup(popup);
-      }
-    });
-    popup.addEventListener('keydown', e => {
-      if (e.key === 'Escape') {
-        closePopup(popup);
-      }
-      // Trap tab focus inside popup
-      if (e.key === 'Tab') {
-        const focusableElements = popup.querySelectorAll('a[href], button:not([disabled]), input, textarea, select, [tabindex]:not([tabindex="-1"])');
-        if (focusableElements.length === 0) return;
-        const firstElement = focusableElements[0];
-        const lastElement = focusableElements[focusableElements.length - 1];
-        if (e.shiftKey) {
-          if (document.activeElement === firstElement) {
-            e.preventDefault();
-            lastElement.focus();
-          }
-        } else {
-          if (document.activeElement === lastElement) {
-            e.preventDefault();
-            firstElement.focus();
-          }
-        }
-      }
-    });
-  });
-
-  // Open contact popup
-  contactBtn.addEventListener('click', () => {
-    openPopup('popup-contact');
-  });
-
-  // Contact form submission (dummy)
-  contactForm.addEventListener('submit', e => {
-    e.preventDefault();
-    formMessage.style.display = 'none';
-
-    const name = contactForm.name.value.trim();
-    const email = contactForm.email.value.trim();
-    const message = contactForm.message.value.trim();
-
-    if (!name || !email || !message) {
-      formMessage.textContent = 'Please fill out all required fields.';
-      formMessage.style.color = 'red';
-      formMessage.style.display = 'block';
-      return;
-    }
-    const re = /\S+@\S+\.\S+/;
-    if (!re.test(email)) {
-      formMessage.textContent = 'Please enter a valid email address.';
-      formMessage.style.color = 'red';
-      formMessage.style.display = 'block';
-      return;
-    }
-    formMessage.textContent = 'Thank you for your message! We will get back to you soon.';
-    formMessage.style.color = 'var(--earth-brown)';
-    formMessage.style.display = 'block';
-    contactForm.reset();
-  });
-</script>
 
 </body>
 </html>
